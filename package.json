@@ -5,6 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --hot --progress --inline --content-base src/ --host 0.0.0.0",
+    "build": "./node_modules/.bin/webpack -p --progress --config webpack.prod.config.js",
     "test": "mocha --reporter nyan --ui bdd --require ignore-styles ./test/setup.js ./test/**/*.test.js"
   },
   "dependencies": {

@@ -7,7 +7,7 @@ module.exports = {
     historyApiFallback: true,
     port: 3000
   },
-  entry: './src/Router.jsx',
+  entry: './src/App.jsx',
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, 'dist')
