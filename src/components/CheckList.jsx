@@ -9,7 +9,7 @@ export default class CheckList extends React.Component {
     let tasks = this.props.tasks.map((task) => (
       <li className="checklist__task">
         <input type="checkbox" defaultChecked={task.done} />
-        {task.name}
+        {task.name}{" "}
         <a href="#" className="checklist__task--remove" />
       </li>
     ));
@@ -17,6 +17,7 @@ export default class CheckList extends React.Component {
     return (
       <div className="checklist">
         <ul>{tasks}</ul>
+        <input type="text" className="checklist__task--add" placeholder="Type then hit enter to add a task" />
       </div>
     );
   }
