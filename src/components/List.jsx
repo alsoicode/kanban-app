@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Card from './Card';
 
 export default class List extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super(...arguments);
+  }
+
+  static propTypes() {
+    return {
+      title: PropTypes.string.isRequired,
+      cards: PropTypes.arrayOf(PropTypes.object)
+    }
   }
 
   render() {

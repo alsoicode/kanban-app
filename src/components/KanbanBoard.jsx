@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import List from './List';
 
 export default class KanbanBoard extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super(...arguments);
+  }
+
+  static propTypes() {
+    return {
+      cards: PropTypes.arrayOf(PropTypes.object)
+    }
   }
 
   render() {
