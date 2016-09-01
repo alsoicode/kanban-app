@@ -31,7 +31,7 @@ export default class Card extends React.Component {
 
     return (
       <div className="card">
-        <div className="card__title" onClick={this.toggleDetails}>{this.props.title}</div>
+        <div className={(this.state.showDetails ? "card__title--is-open " : "") + "card__title"} onClick={this.toggleDetails}>{this.props.title}</div>
         {cardDetails}
       </div>
     );
